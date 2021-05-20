@@ -70,9 +70,9 @@
                                 <div class="main-menu d-none d-lg-block">
                                     <nav> 
                                         <ul id="navigation">                                                                                          
-                                            <li><a href="index.html">Inicio</a></li>
+                                            <li><a href="index.php">Inicio</a></li>
                                             <li><a href="about.html">¿Quienes somos?</a></li>
-                                            <li><a href="routs.html">Rutas</a></li> 
+                                            <li><a href="routs.php">Rutas</a></li> 
                                             <li><a href="contact.html">Registrese</a></li>    
                                                                                      
                                         </ul>
@@ -205,22 +205,25 @@
                             <thead>
                                 <tr>
                                     <th>Ruta</th>
-                                    <th>Horario</th>
+                                    <th>Horario de salida</th>
+                                    <th>Horario de llegada</th>
                                     <th>Precio</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
                                     require_once "php/connect.php";
-                                    $query="SELECT * FROM rutas";
+                                    $query="SELECT Descripcion, Hora_sal, Hora_lle, Precio_boleto FROM rutas";
                                     $consulta1=$mysqli->query($query);
                                     while($fila=$consulta1->fetch_array(MYSQLI_ASSOC)){
                                         echo "<tr>
-                                            <td>".$fila['ruta']."</td>
-                                            <td>".$fila['horario']."</td>
-                                            <td>".$fila['precio']."</td>
+                                            <td>".$fila['Descripcion']."</td>
+                                            <td>".$fila['Hora_sal']."</td>
+                                            <td>".$fila['Hora_lle']."</td>
+                                            <td>".$fila['Precio_boleto']."</td>
                                         </tr>";
                                     }
+                                    mysqli_close($mysqli);
                                 ?>		
                             </tbody>
 					    </table>						
@@ -231,6 +234,7 @@
     </section><br><br>
     <!-- Team Ara End -->
     <!--? Testimonial Start -->
+    
     
 </main>
 <footer>
@@ -352,3 +356,5 @@
     
 </body>
 </html>
+
+

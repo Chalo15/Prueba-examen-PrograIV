@@ -68,7 +68,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.php"><img src="assets/img/logo/logo.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -77,7 +77,7 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav> 
                                             <ul id="navigation">                                                                                          
-                                                <li><a href="index.html">Inicio</a></li>
+                                                <li><a href="index.php">Inicio</a></li>
                                                 <li><a href="about.html">¿Quienes somos?</a></li>
                                                 <li><a href="contact.html">Registrese</a></li>
                                             </ul>
@@ -111,7 +111,7 @@
                                 <h2>Rutas y Horarios</h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                                        <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
                                     </ol>
                                 </nav>
                             </div>
@@ -130,7 +130,43 @@
                         <div class="section-tittle text-center mb-80">
                             <span>Centroamérica</span>
                             <h2>Rutas y Horarios</h2>
+                            
                         </div>
+                        <div class="contact-form-wrapper">
+                    
+						<table cellspacing="30" cellpadding="10" border="1">
+                            <thead>
+                                <tr>
+                                    <th>Ruta</th>
+                                    <th>Horario de salida</th>
+                                    <th>Horario de llegada</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad de boletos disponibles</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    require_once "php/connect.php";
+                                    $query="SELECT Descripcion, Hora_sal, Hora_lle, Precio_boleto, Cant_boletos FROM rutas";
+                                    $consulta1=$mysqli->query($query);
+                                    while($fila=$consulta1->fetch_array(MYSQLI_ASSOC)){
+                                        echo "<tr>
+                                            <td>".$fila['Descripcion']."</td>
+                                            <td>".$fila['Hora_sal']."</td>
+                                            <td>".$fila['Hora_lle']."</td>
+                                            <td>".$fila['Precio_boleto']."</td>
+                                            <td>".$fila['Cant_boletos']."</td>
+                                        </tr>";
+                                    }
+                                    mysqli_close($mysqli);
+                                ?>		
+                            </tbody>
+					    </table>		
+                    </div>
+
+
+
+
                     </div>
                 </div>                
             </div>
@@ -202,7 +238,7 @@
                             <div class="single-footer-caption mb-50">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="index.php"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">

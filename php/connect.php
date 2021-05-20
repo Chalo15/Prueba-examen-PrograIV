@@ -1,6 +1,6 @@
 <?php
 
-    $mysqli= new mysqli("localhost", "root", "sqldepablo99", "primerproyecto");
+    $mysqli= new mysqli("localhost", "root", "", "examen1");
 
     if(mysqli_connect_errno()){
 
