@@ -69,7 +69,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.php"><img src="assets/img/logo/logo.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -78,7 +78,7 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav> 
                                             <ul id="navigation">                                                                                          
-                                                <li><a href="index.html">Inicio</a></li>
+                                                <li><a href="index.php">Inicio</a></li>
                                                 <li><a href="about.html">¿Quienes somos?</a></li>
                                             </ul>
                                         </nav>
@@ -107,7 +107,7 @@
                                 <h2>Compra de Pasajes</h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Buses San Marino</a></li>
+                                        <li class="breadcrumb-item"><a href="index.php">Buses San Marino</a></li>
                                     </ol>
                                 </nav>
                             </div>

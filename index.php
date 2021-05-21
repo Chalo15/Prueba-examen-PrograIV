@@ -262,10 +262,9 @@
                             <div class="footer-tittle">
                                 <h4>Buses SanMarino</h4>
                                 <ul>
-                                    <li><a href="#">Quienes somos?</a></li>
-                                    <li><a href="#">Rutas</a></li>
-                                    <li><a href="#"> Información</a></li>
-                                    <li><a href="#"> Política de privacidad</a></li>
+                                    <li><a href="about.html">Quienes somos?</a></li>
+                                    <li><a href="routs.php">Rutas</a></li>
+                                    <li><a href="privacy.html"> Política de privacidad</a></li>
                                 </ul>
                             </div>
                         </div>
