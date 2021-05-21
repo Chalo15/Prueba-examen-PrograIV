@@ -1,3 +1,20 @@
+<?php
+
+session_start();
+
+if(!$_SESSION['verificar']){
+    header("Location: LoginUsua.php");//cambiar al login que esta haciendo Sergio
+}
+$now = time();
+
+if($now > $_SESSION['expire']) {
+session_destroy();
+header("Location: cierre.html");//cambiar direccion o hacer otra pag para que muestre esta info
+exit;
+}
+?>
+
+
 <!doctype html>
 <html class="no-js" lang="zxx">
     <head>
@@ -80,6 +97,7 @@
                                             <ul id="navigation">                                                                                          
                                                 <li><a href="index.php">Inicio</a></li>
                                                 <li><a href="about.html">¿Quienes somos?</a></li>
+                                                <li><a href="logout.php">Cerrar sesión</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -155,6 +173,7 @@
                                             <td>".$fila['id_estacionSalida']."</td>
                                             <td><a href='realizar.php?id=".$fila['id_ruta']."' style='color:#D35400'>Comprar Boleto</a></td>
                                         </tr>";
+                                        mysqli_close($mysqli);
                                     }
                                 ?>	
                             </tbody>

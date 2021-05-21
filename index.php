@@ -74,7 +74,7 @@
                                             <li><a href="about.html">¿Quienes somos?</a></li>
                                             <li><a href="routs.php">Rutas</a></li> 
                                             <li><a href="contact.html">Registrese</a></li>    
-                                                                                     
+                                            <!--<li><a href="realizar.php">prueba</a></li>-->
                                         </ul>
                                     </nav>
                                 </div>

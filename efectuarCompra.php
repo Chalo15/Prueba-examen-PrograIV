@@ -1,5 +1,18 @@
 <?php
 
+session_start();
+
+	if(!$_SESSION['verificar']){
+		header("Location: LoginUsua.php");//cambiar al login que esta haciendo Sergio
+	}
+	$now = time();
+
+	if($now > $_SESSION['expire']) {
+	session_destroy();
+	header("Location: cierre.html");//cambiar direccion o hacer otra pag para que muestre esta info
+	exit;
+	}
+
 	require_once "php/connect.php";
 
 	$idruta=$_POST['id'];
@@ -27,4 +40,5 @@
 		  windows.history.go(-1);
 		  </script>';
 	}
+	mysqli_close($mysqli);
 ?>
