@@ -70,17 +70,17 @@
                                 <div class="main-menu d-none d-lg-block">
                                     <nav> 
                                         <ul id="navigation">                                                                                          
-                                            <li><a href="index.php">Inicio</a></li>
+                                            <li><a href="index.html">Inicio</a></li>
                                             <li><a href="about.html">¿Quienes somos?</a></li>
-                                            <li><a href="routs.php">Rutas</a></li> 
+                                            <li><a href="routs.html">Rutas</a></li> 
                                             <li><a href="contact.html">Registrese</a></li>    
-                                            <!--<li><a href="realizar.php">prueba</a></li>-->
+                                                                                     
                                         </ul>
                                     </nav>
                                 </div>
                                 <!-- Header-btn -->
                                 <div class="header-right-btn d-none d-lg-block ml-20">
-                                    <a href="about.html" class="btn header-btn">Iniciar Sesión</a>
+                                    <a href="Login.php" class="btn header-btn">Iniciar Sesión</a>
                                 </div>
                             </div>
                         </div> 
