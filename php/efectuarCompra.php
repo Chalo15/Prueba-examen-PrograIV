@@ -3,7 +3,7 @@
 session_start();
 
 	if(!$_SESSION['verificar']){
-		header("Location: LoginUsua.php");//cambiar al login que esta haciendo Sergio
+		header("Location: Login.php");//cambiar al login que esta haciendo Sergio
 	}
 	$now = time();
 

@@ -3,7 +3,7 @@
 session_start();
 
 if(!$_SESSION['verificar']){
-    header("Location: LoginUsua.php");//cambiar al login que esta haciendo Sergio
+    header("Location: Login.php");//cambiar al login que esta haciendo Sergio
 }
 $now = time();
 
@@ -97,7 +97,7 @@ exit;
                                             <ul id="navigation">                                                                                          
                                                 <li><a href="index.php">Inicio</a></li>
                                                 <li><a href="about.html">¿Quienes somos?</a></li>
-                                                <li><a href="logout.php">Cerrar sesión</a></li>
+                                                <li><a href="php/logout.php">Cerrar sesión</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -146,7 +146,7 @@ exit;
 							$query="SELECT * FROM rutas WHERE id_ruta='$id'";
 							$consulta1=$mysqli->query($query);
 							$fila=$consulta1->fetch_array(MYSQLI_ASSOC);
-							echo '<form action="efectuarCompra.php" method="POST">
+							echo '<form action="php/efectuarCompra.php" method="POST">
 								<input type="hidden" name="id" value="'.$fila['id_ruta'].'">
 								<input type="hidden" name="dispo" value="'.$fila['Cant_boletos'].'">
 								<label>Campos solicitados</label><input type="number" name="campos" placeholder="Máximo 5 por persona"><br><br>

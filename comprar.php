@@ -3,7 +3,7 @@
 session_start();
 
 if(!$_SESSION['verificar']){
-    header("Location: LoginUsua.php");//cambiar al login que esta haciendo Sergio
+    header("Location: Login.php");//cambiar al login que esta haciendo Sergio
 }
 $now = time();
 
@@ -97,7 +97,7 @@ exit;
                                             <ul id="navigation">                                                                                          
                                                 <li><a href="index.php">Inicio</a></li>
                                                 <li><a href="about.html">¿Quienes somos?</a></li>
-                                                <li><a href="logout.php">Cerrar sesión</a></li>
+                                                <li><a href="php/logout.php">Cerrar sesión</a></li>
                                             </ul>
                                         </nav>
                                     </div>

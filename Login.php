@@ -148,7 +148,7 @@
 
             require_once "php/connect.php";
 
-            require_once "procesos/login.php";
+            require_once "php/log.php";
 
         }
     ?>
