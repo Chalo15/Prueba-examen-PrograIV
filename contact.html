@@ -47,7 +47,7 @@
                                     <div class="header-info-left">
                                         <ul>     
                                             <li>Telefono: 2210 4010</li>
-                                    <li>Correo: busessanmarino@gmail.com</li>
+                                            <li>Correo: busessanmarino@gmail.com</li>
                                         </ul>
                                     </div>
                                     <div class="header-info-right">
@@ -55,7 +55,7 @@
                                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                            <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@
                                 <!-- Logo -->
                                 <div class="col-xl-2 col-lg-2">
                                     <div class="logo">
-                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                        <a href="index.php"><img src="assets/img/logo/logo.png" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-xl-10 col-lg-10">
@@ -77,7 +77,7 @@
                                         <div class="main-menu d-none d-lg-block">
                                             <nav> 
                                                 <ul id="navigation">                                                                                          
-                                                    <li><a href="index.html">Inicio</a></li>
+                                                    <li><a href="index.php">Inicio</a></li>
                                                     <li><a href="about.html">¿Quienes somos?</a></li>
                                                     <li><a href="services.html">Unidades</a></li>
                                                 </ul>
@@ -85,7 +85,7 @@
                                         </div>
                                         <!-- Header-btn -->
                                         <div class="header-right-btn d-none d-lg-block ml-20">
-                                            <a href="about.html" class="btn header-btn">Iniciar sesión</a>
+                                            <a href="Login.php" class="btn header-btn">Iniciar sesión</a>
                                         </div>
                                     </div>
                                 </div> 
@@ -108,10 +108,10 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap">
-                                <h2>Afiliese con nostros</h2>
+                                <h2>Afíliese con nostros</h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                                        <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
                                     </ol>
                                 </nav>
                             </div>
@@ -141,27 +141,32 @@
                                </div>
                             </div>
                             <!-- form -->
-                            <form action="#" class="contact-form">
+                            <form action="php/guardarp.php" class="contact-form">
                                 <p>Datos requeridos: </p>
                                 <div class="row ">
                                     <div class="col-lg-12">
                                         <div class="input-form">
-                                            <input type="text" placeholder="Numero de pasaporte" name = "id">
+                                            <input type="text" placeholder="Número de pasaporte" name = "Id">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6">
                                         <div class="input-form">
-                                            <input type="text" placeholder="Nombre" name = "nombre">
+                                            <input type="text" placeholder="Nombre" name = "Nombre">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6">
                                         <div class="input-form">
-                                            <input type="text" placeholder="Apellidos" name = "apellidos">
+                                            <input type="text" placeholder="Primer apellido" name = "Apellido1 ">
                                         </div>
                                     </div>
-                                    <div class="col-lg-12">
+                                    <div class="col-lg-6 col-md-6">
                                         <div class="input-form">
-                                            <input type="text" placeholder="Correo electrónico" name = "email">
+                                            <input type="text" placeholder=" Segundo apellido" name = "Apellido2">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="input-form">
+                                            <input type="text" placeholder="Correo electrónico" name = "Email">
                                         </div>
                                     </div>                                    
                                     <div class="col-lg-6">
@@ -180,24 +185,29 @@
                                     </div>                                     
                                     <div class="col-lg-6 col-md-6">
                                         <div class="input-form">
-                                            <input type="number" placeholder="Numero de telefono" name = "telefono">
+                                            <input type="number" placeholder="Numero de cédula" name = "Cedula">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="input-form">
-                                            <input type="number" placeholder="Número de tarjeta" name = "card">
+                                            <input type="number" placeholder="Número de tarjeta" name = "Tarjeta">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="input-form">
-                                            <input type="text" placeholder="Fecha de Vencimiento" name = "fechav">
+                                            <input type="text" placeholder="Fecha de Vencimiento" name = "Fechav">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="input-form">
-                                            <input type="number" placeholder="CCV" name = "ccv">
+                                            <input type="number" placeholder="CCV" name = "CCV">
                                         </div>
-                                    </div>                                    
+                                    </div> 
+                                    <div class="col-lg-12">
+                                        <div class="input-form">
+                                            <input type="text" placeholder="Clave" name = "Clave">
+                                        </div>
+                                    </div>                                   
                                     <!-- Button -->
                                     <div class="col-lg-12">
                                         <button name="submit" class="submit-btn">Registrarse</button>
@@ -236,10 +246,9 @@
                                 <div class="footer-tittle">
                                     <h4>Buses SanMarino</h4>
                                     <ul>
-                                        <li><a href="#">Quienes somos?</a></li>
-                                        <li><a href="#">Rutas</a></li>
-                                        <li><a href="#"> Información</a></li>
-                                        <li><a href="#"> Política de privacidad</a></li>
+                                        <li><a href="about.html">Quienes somos?</a></li>
+                                        <li><a href="routs.php">Rutas</a></li>
+                                        <li><a href="privacy.html"> Política de privacidad</a></li>
                                     </ul>
                                 </div>
                             </div>

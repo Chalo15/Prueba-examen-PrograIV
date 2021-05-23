@@ -1,9 +1,26 @@
+<?php
+
+session_start();
+
+if(!$_SESSION['verificar']){
+    header("Location: Login.php");//cambiar al login que esta haciendo Sergio
+}
+$now = time();
+
+if($now > $_SESSION['expire']) {
+session_destroy();
+header("Location: cierre.html");//cambiar direccion o hacer otra pag para que muestre esta info
+exit;
+}
+?>
+
+
 <!doctype html>
 <html class="no-js" lang="zxx">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>¿Quienes somos? </title>
+        <title>Solicitar campos </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="manifest" href="site.webmanifest">
@@ -21,6 +38,7 @@
             <link rel="stylesheet" href="assets/css/slick.css">
             <link rel="stylesheet" href="assets/css/nice-select.css">
             <link rel="stylesheet" href="assets/css/style.css">
+            <link rel="stylesheet" href="assets/css/styletable.css">
    </head>
 
    <body>
@@ -30,7 +48,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.jpg" alt="">
+                    <img src="assets/img/logo/loder.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -46,16 +64,16 @@
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="header-info-left">
                                     <ul>     
-                                        <li>Telefono: 2210 4010</li>
-										<li>Correo: busessanmarino@gmail.com</li>
+                                        <li>Teléfono: 2210 4010</li>
+                                        <li>Correo: busessanmarino@gmail.com</li>
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
                                     <ul class="header-social">    
                                         <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-										<li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-										<li><a href="https://es.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-										<li> <a href="https://www.google.com/" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://es.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li> <a href="https://www.google.com/" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -64,23 +82,24 @@
                 </div>
                <div class="header-bottom  header-sticky">
                     <div class="container">
-                        <div class="row align-items-center">            
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.php"><img src="assets/img/logo/logo.png" alt=""></a>
+                                </div>
+                            </div>
                             <div class="col-xl-10 col-lg-10">
                                 <div class="menu-wrapper  d-flex align-items-center justify-content-end">
                                     <!-- Main-menu -->
                                     <div class="main-menu d-none d-lg-block">
                                         <nav> 
                                             <ul id="navigation">                                                                                          
-                                                <li><a href="index.php">Inicio</a></li>                                                
-                                                <li><a href="routs.php">Horarios y Rutas</a></li> 
-                                                <li><a href="services.html">Unidades</a></li>                                               
-                                                <li><a href="contact.html">Registrese</a></li>
+                                                <li><a href="index.php">Inicio</a></li>
+                                                <li><a href="about.html">¿Quienes somos?</a></li>
+                                                <li><a href="php/logout.php">Cerrar sesión</a></li>
                                             </ul>
                                         </nav>
-                                    </div>
-                                    <!-- Header-btn -->
-                                    <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="Login.php" class="btn header-btn">Iniciar Sesión</a>
                                     </div>
                                 </div>
                             </div> 
@@ -103,10 +122,10 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap">
-                                <h2>Acerca de Nosotros</h2>
+                                <h2>Compra de Pasajes</h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+                                        <li class="breadcrumb-item"><a href="index.php">Buses San Marino</a></li>
                                     </ol>
                                 </nav>
                             </div>
@@ -116,42 +135,38 @@
             </div>
         </div>
         <!-- slider Area End-->
-        <!--? About Area Start -->
-        <div class="about-low-area section-padding30">
+        <!--? Categories Area Start -->
+        <div class="categories-area section-padding30">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="about-caption mb-50">
-                            <!-- Section Tittle -->
-                            <div class="section-tittle mb-35">
-                                <span>Reseña Historica</span>
-                                <h2>¿Como iniciamos?</h2>
-                            </div>
-                                <p>Somos una empresa familiar que nació hace 40 años en Costa Rica. Hoy se encarga de ella la familia Marino-Boza (segunda generación desde la fundación), con más de 500 empleados a su cargo.</p>
-                                <p>A inicios de los años 80's todo tuvo comienzo con la astucia y valentía de Don Manuel Marino Chacón. Mediante algunos ahorros, prestamos y buenas amistades Don Manuel decidió introducirse en el mercado de transportes con 2 automotores.</p>
-                                <p>Debieron pasar 15 años para que la empresa adopte una de las medidas más importantes de su historia: la internacionalización del servicio. En enero de 1996, finalmente, la empresa entra en el régimen TIR (Transporte Internacional Routier).</p>
-                                <p>El negocio creció y para la decada de los 00' contaba con mas de 200 autobuses al servicio de los usuarios. Evidentemente con el paso del tiempo la empresa se expandió cada vez más a paises vecinos de C.R hasta que en el año 2011 nos encontráramos en todos los paises de la región central.</p>
-                                <p>Nuestro objetivo es servirle a usted y su familia, hoy a nivel centroaméricano, en la totalidad de sus transportes en todo momento.</p>                            
-                            </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <!-- about-img -->
-                        <div class="about-img ">
-                            <div class="about-font-img">
-                                <img src="assets/img/gallery/about2.png" alt="">
-                            </div>
-                            <div class="about-back-img d-none d-lg-block">
-                                <img src="assets/img/gallery/about1.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+					<?php
+						if(isset($_GET['id'])){
+							require_once "php/connect.php";
+							$id=$_GET['id'];
+							$query="SELECT * FROM rutas WHERE id_ruta='$id'";
+							$consulta1=$mysqli->query($query);
+							$fila=$consulta1->fetch_array(MYSQLI_ASSOC);
+							echo '<form action="php/efectuarCompra.php" method="POST">
+								<input type="hidden" name="id" value="'.$fila['id_ruta'].'">
+								<input type="hidden" name="dispo" value="'.$fila['Cant_boletos'].'">
+								<label>Campos solicitados</label><input type="number" name="campos" placeholder="Máximo 5 por persona"><br><br>
+								<input type="submit" value="Comprar">
+							</form>';
+						}else{
+							echo '<script>
+							alert("Error: no se pudo realiar la petición.");
+							windows.history.go(-1);
+							</script>';
+						}
+						mysqli_close($mysqli);
+					?>   
+
+
+                </div>  
             </div>
         </div>
-        <!-- About Area End -->
-        
+        <!-- Categories Area End -->
        
-         
     </main>
     <footer>
         <!--? Footer Start-->
@@ -178,9 +193,10 @@
                                 <div class="footer-tittle">
                                     <h4>Buses SanMarino</h4>
                                     <ul>
-                                        <li><a href="routs.php">Rutas</a></li>
-                                        
-                                        <li><a href="privacy.html"> Política de privacidad</a></li>
+                                        <li><a href="about.html">Quienes somos?</a></li>
+                                        <li><a href="routs.html">Rutas</a></li>
+                                        <li><a href="#"> Información</a></li>
+                                        <li><a href="#"> Política de privacidad</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -202,7 +218,7 @@
                         
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p class="info1">Empresa con funciones a nivel centroamericano. Trabajamos para brindar la mejor experiencia de viaje.</p>
+                                        <p class="info1">Empresa con funciones a nivel centroaméricano. Trabajamos para brindar la mejor experiencia de viaje.</p>
                                     </div>
                                 </div>
                                 <!-- Footer Social -->
@@ -221,8 +237,8 @@
                         <div class="col-lg-12">
                             <div class="footer-copy-right text-center">
                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Plantilla de Colorlib modificada con fines académicos</a>
-      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Plantilla de Colorlib modificada con fines académicos</a>
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                             </div>
                         </div>
                     </div>

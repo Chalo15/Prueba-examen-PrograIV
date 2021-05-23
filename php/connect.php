@@ -1,5 +1,5 @@
 <?php
-//hola
+
     $mysqli= new mysqli("localhost", "root", "", "examen1");
 
     if(mysqli_connect_errno()){
