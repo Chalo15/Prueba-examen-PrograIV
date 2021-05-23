@@ -158,7 +158,7 @@
                                             <td>".$fila['Cant_boletos']."</td>
                                         </tr>";
                                     }
-                                    mysqli_close($mysqli);
+                                    //mysqli_close($mysqli);
                                 ?>		
                             </tbody>
 					    </table>		

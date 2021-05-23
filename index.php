@@ -223,7 +223,7 @@
                                             <td>".$fila['Precio_boleto']."</td>
                                         </tr>";
                                     }
-                                    mysqli_close($mysqli);
+                                   // mysqli_close($mysqli);
                                 ?>		
                             </tbody>
 					    </table>						

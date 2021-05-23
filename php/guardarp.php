@@ -63,7 +63,7 @@
 		  header("Location: index.php");
 		  
 	}
-	mysqli_close($mysqli);
+	//mysqli_close($mysqli);
 
 	
 ?>

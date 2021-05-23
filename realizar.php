@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+@session_start();
 
 if(!$_SESSION['verificar']){
     header("Location: Login.php");//cambiar al login que esta haciendo Sergio

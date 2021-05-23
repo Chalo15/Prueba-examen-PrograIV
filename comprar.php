@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+echo"prueba";
 if(!$_SESSION['verificar']){
     header("Location: Login.php");//cambiar al login que esta haciendo Sergio
 }
@@ -9,7 +9,7 @@ $now = time();
 
 if($now > $_SESSION['expire']) {
 session_destroy();
-header("Location: cierre.html");//cambiar direccion o hacer otra pag para que muestre esta info
+//header("Location: cierre.html");//cambiar direccion o hacer otra pag para que muestre esta info
 exit;
 }
 ?>
