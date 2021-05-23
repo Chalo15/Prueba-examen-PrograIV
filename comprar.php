@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 echo"prueba";
 if(!$_SESSION['verificar']){
@@ -13,7 +12,6 @@ session_destroy();
 exit;
 }
 ?>
-
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -158,7 +156,7 @@ exit;
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php
+ <?php
                                     require_once "php/connect.php";
                                     $query="SELECT * FROM rutas";
                                     $consulta1=$mysqli->query($query);
@@ -175,7 +173,7 @@ exit;
                                         </tr>";
                                         mysqli_close($mysqli);
                                     }
-                                ?>	
+?>
                             </tbody>
                         </table>
                     </div>

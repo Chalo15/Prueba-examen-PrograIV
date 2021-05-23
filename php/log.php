@@ -14,7 +14,7 @@ ob_start();
 
         $fila=$consulta2->fetch_array(MYSQLI_ASSOC);
 
-        @session_start();
+        session_start();
         
         $_SESSION['user']=$fila['Nombre'];
         $_SESSION['Identi']=$fila['Cedula'];

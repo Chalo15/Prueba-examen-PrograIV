@@ -13,8 +13,6 @@ header("Location: cierre.html");//cambiar direccion o hacer otra pag para que mu
 exit;
 }
 ?>
-
-
 <!doctype html>
 <html class="no-js" lang="zxx">
     <head>
@@ -140,6 +138,7 @@ exit;
             <div class="container">
                 <div class="row">
 					<?php
+                    //meter 13%, subtotal, total
 						if(isset($_GET['id'])){
 							require_once "php/connect.php";
 							$id=$_GET['id'];
@@ -149,6 +148,8 @@ exit;
 							echo '<form action="php/efectuarCompra.php" method="POST">
 								<input type="hidden" name="id" value="'.$fila['id_ruta'].'">
 								<input type="hidden" name="dispo" value="'.$fila['Cant_boletos'].'">
+                                <label>Precio del boleto</label>
+                                <input type="text" name="precio" value="'.$fila['Precio_boleto'].'" readonly>
 								<label>Campos solicitados</label><input type="number" name="campos" placeholder="Máximo 5 por persona"><br><br>
 								<input type="submit" value="Comprar">
 							</form>';
