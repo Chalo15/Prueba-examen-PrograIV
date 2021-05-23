@@ -1,5 +1,5 @@
 <?php
-	require_once "php/connect.php";
+	require_once "connect.php";
 
     $nombre = $_POST['Nombre'];//
     $apellido1 = $_POST['Apellido1'];//
