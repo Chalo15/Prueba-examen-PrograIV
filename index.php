@@ -70,10 +70,10 @@
                                 <div class="main-menu d-none d-lg-block">
                                     <nav> 
                                         <ul id="navigation">                                                                                          
-                                            <li><a href="index.html">Inicio</a></li>
+                                            <li><a href="index.php">Inicio</a></li>
                                             <li><a href="about.html">¿Quienes somos?</a></li>
-                                            <li><a href="routs.html">Rutas</a></li> 
-                                            <li><a href="contact.html">Registrese</a></li>    
+                                            <li><a href="routs.php">Rutas</a></li> 
+                                            <li><a href="contact.php">Registrese</a></li>    
                                                                                      
                                         </ul>
                                     </nav>

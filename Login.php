@@ -76,8 +76,8 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav> 
                                             <ul id="navigation">                                                                                          
-                                                <li><a href="index.html">Inicio</a></li>                                                
-                                                <li><a href="routs.html">Horarios y Rutas</a></li> 
+                                                <li><a href="index.php">Inicio</a></li>                                                
+                                                <li><a href="routs.php">Horarios y Rutas</a></li> 
                                                 <li><a href="services.html">Unidades</a></li>
                                             </ul>
                                         </nav>
@@ -178,10 +178,9 @@
                             <div class="footer-tittle">
                                 <h4>Buses SanMarino</h4>
                                 <ul>
-                                    <li><a href="#">Quienes somos?</a></li>
-                                    <li><a href="#">Rutas</a></li>
-                                    <li><a href="#"> Información</a></li>
-                                    <li><a href="#"> Política de privacidad</a></li>
+                                    <li><a href="about.html">Quienes somos?</a></li>
+                                    <li><a href="routs.php">Rutas</a></li>
+                                    <li><a href="privacy.html"> Política de privacidad</a></li>
                                 </ul>
                             </div>
                         </div>

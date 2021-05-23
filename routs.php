@@ -79,7 +79,7 @@
                                             <ul id="navigation">                                                                                          
                                                 <li><a href="index.php">Inicio</a></li>
                                                 <li><a href="about.html">¿Quienes somos?</a></li>
-                                                <li><a href="contact.html">Registrese</a></li>
+                                                <li><a href="contact.php">Registrese</a></li>
                                             </ul>
                                         </nav>
                                     </div>
