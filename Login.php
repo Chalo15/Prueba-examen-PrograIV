@@ -1,3 +1,9 @@
+<?php
+        if(isset($_POST['usuario']) && isset($_POST['clave'])){
+            require_once "php/connect.php";
+            require_once "php/log.php";
+        }
+?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -137,12 +143,7 @@
             </div>
         </div>
     </div>
-<?php
-        if(isset($_POST['usuario']) && isset($_POST['clave'])){
-            require_once "php/connect.php";
-            require_once "php/log.php";
-        }
-?>
+
 <footer>
     <!--? Footer Start-->
     <div class="footer-area footer-bg">
