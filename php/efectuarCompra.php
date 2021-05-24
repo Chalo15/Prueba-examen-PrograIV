@@ -10,7 +10,7 @@ session_start();
 
 	if($now > $_SESSION['expire']) {
 	session_destroy();
-	header("Location: cierre.html");//cambiar direccion o hacer otra pag para que muestre esta info
+	header("Refresh:0; url=index.php");//cambiar direccion o hacer otra pag para que muestre esta info
 	exit;
 	}
 	$idpersona=  $_SESSION['Identi'];
@@ -29,6 +29,7 @@ session_start();
 				alert("No hay suficientes espacios disponibles en este momento.");
 				windows.history.go(-1);
 			</script>';
+			header("Refresh:0; url=comprar.php");
 		exit;
 	}
 	$verificarD = $mysqli->query("SELECT * FROM usuarios WHERE Cedula = '$idpersona'");
@@ -38,6 +39,7 @@ session_start();
 		alert("Excediste la cantidad de boletos máximos permitidos por persona");
 		windows.history.go(-1);
 		</script>';
+		header("Refresh:0; url=comprar.php");
 		exit;
 	}
 	$impuesto=($precior*0.13)+$precior;
@@ -49,13 +51,15 @@ session_start();
 		  windows.history.go(-1);
 		  </script>';*/
 		 //header("Location: pdf.php");
-		 header("Refresh:0; url=../pdf/pdf.php?idr=$idruta");
+		 header("Refresh:0; url=../pdf/pdf.php?idr=$idruta ");
+		 
 		 
 	}else{
 		echo '<script>
 		  alert("Error no se pudo comprar los boletos");
 		  windows.history.go(-1);
 		  </script>';
+		  header("Refresh:0; url=comprar.php");
 		  exit;
 	}
 	mysqli_close($mysqli);

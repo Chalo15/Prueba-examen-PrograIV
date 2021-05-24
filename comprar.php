@@ -8,7 +8,8 @@ $now = time();
 
 if($now > $_SESSION['expire']) {
 session_destroy();
-//header("Location: cierre.html");//cambiar direccion o hacer otra pag para que muestre esta info
+//header("Location: index.php");//cambiar direccion o hacer otra pag para que muestre esta info
+header("Refresh:0; url=index.php");
 exit;
 }
 ?>
@@ -252,7 +253,7 @@ exit;
                         <div class="col-lg-12">
                             <div class="footer-copy-right text-center">
                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Plantilla de Colorlib modificada con fines académicos</a>
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                             </div>
                         </div>

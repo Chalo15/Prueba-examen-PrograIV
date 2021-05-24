@@ -141,32 +141,32 @@
                                 </div>
                                 </div>
                                 <!-- form -->
-                                <form action="php/guardarp.php" class="contact-form" method="POST">
+                                <form action="php/guardarp.php" name="miformulario" class="contact-form" method="POST" onsubmit="return validacion()">
                                     <p>Datos requeridos: </p>
                                     <div class="row ">
                                         <div class="col-lg-12">
                                             <div class="input-form">
-                                                <input type="text" placeholder="Número de pasaporte" name = "Id">
+                                                <input type="text" placeholder="Número de pasaporte" name = "Id" id="Id" >
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <div class="input-form">
-                                                <input type="text" placeholder="Nombre" name = "Nombre">
+                                                <input type="text" placeholder="Nombre" name = "Nombre" id="Nombre" >
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <div class="input-form">
-                                                <input type="text" placeholder="Primer apellido" name = "Apellido1">
+                                                <input type="text" placeholder="Primer apellido" name = "Apellido1" id="Apellido1">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <div class="input-form">
-                                                <input type="text" placeholder=" Segundo apellido" name = "Apellido2">
+                                                <input type="text" placeholder=" Segundo apellido" name = "Apellido2" id="Apellido2">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <div class="input-form">
-                                                <input type="text" placeholder="Correo electrónico" name = "Email">
+                                                <input type="text" placeholder="Correo electrónico" name = "Email" id="Email">
                                             </div>
                                         </div>                                    
                                         <div class="col-lg-6">
@@ -185,32 +185,33 @@
                                         </div>                                     
                                         <div class="col-lg-6 col-md-6">
                                             <div class="input-form">
-                                                <input type="number" placeholder="Numero de cédula" name = "Cedula">
+                                                <input type="number" placeholder="Numero de cédula" name = "Cedula" id="Cedula" maxlength="9"
+                                                minlength="9">
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="input-form">
-                                                <input type="number" placeholder="Número de tarjeta" name = "Tarjeta">
+                                                <input type="number" placeholder="Número de tarjeta" name = "Tarjeta" id="Tarjeta">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6">
                                             <div class="input-form">
-                                                <input type="text" placeholder="Fecha de Vencimiento" name = "Fechav">
+                                                <input type="text" placeholder="Fecha de Vencimiento" name = "Fechav" id="Fechav">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6">
                                             <div class="input-form">
-                                                <input type="number" placeholder="CCV" name = "CCV">
+                                                <input type="number" placeholder="CCV" name = "CCV" id="CCV">
                                             </div>
                                         </div> 
                                         <div class="col-lg-12">
                                             <div class="input-form">
-                                                <input type="text" placeholder="Clave" name = "Clave">
+                                                <input type="text" placeholder="Clave" name = "Clave" id="Clave">
                                             </div>
                                         </div>                                   
                                         <!-- Button -->
                                         <div class="col-lg-12">
-                                            <input name="gua" class="submit-btn" type="submit" value='Registrarse'>
+                                            <input name="gua" class="submit-btn" type="submit" value='Registrarse' >
                                         </div>
                                     </div>
                                 </form>	
@@ -298,7 +299,7 @@
                             <div class="col-lg-12">
                                 <div class="footer-copy-right text-center">
                                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                                 </div>
                             </div>
@@ -346,6 +347,7 @@
             <!-- Jquery Plugins, main Jquery -->	
             <script src="./assets/js/plugins.js"></script>
             <script src="./assets/js/main.js"></script>
+            <script src="./assets/js/validaciones.js"></script>
 
         </body>
     

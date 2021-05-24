@@ -30,7 +30,7 @@ $query = "SELECT * from usuarios where Cedula='$idusua'";
 
     if($consulta2->num_rows>=1){
         $fila2=$consulta2->fetch_array(MYSQLI_ASSOC);
-        
+        $consecutivo=$fila2['num'];
         $cantboletos=$fila2['CantidadBoletos'];
         $preciou=$fila2['Precio_unidad'];
         $total=$fila2['Precio_total'];
@@ -210,7 +210,17 @@ $query = "SELECT * from usuarios where Cedula='$idusua'";
     $pdf->SetXY(20,175);
     $pdf->Cell(150,5,'',0,0,'C',1);
 
-
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->SetXY(130,190);
+    $pdf->SetFont('Arial','B',12);
+    $pdf->Cell(20,0.2,'Consecutivo de documento',0,0,'C',1);
+    
+    
+    
+    $pdf->SetXY(120,195);
+    $pdf->SetFont('Arial','I',10);
+    $pdf->SetFont('Arial','B',12);
+    $pdf->Cell(40,5,$consecutivo,0,0,'C',1);
 
     $pdf->SetFont('Arial','B',12);
     $pdf->SetXY(35,190);
@@ -262,7 +272,7 @@ $query = "SELECT * from usuarios where Cedula='$idusua'";
 
 
    
-
+   
 	$pdf->Output();
 }
 else{

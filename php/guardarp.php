@@ -24,9 +24,9 @@
 			  windows.history.go(-1);
 			  </script>';
 			 
-
+			  header("Location: contact.php");
 		exit;
-		header("Location: contact.php");
+		
 	}
 	
 	
@@ -36,9 +36,9 @@
 			  alert("Ya existe un usuario registrado con el mismo ID");
 			  windows.history.go(-1);
 			  </script>';
-		
+			  header("Location: contact.html");
 		exit;
-		header("Location: contact.html");
+		
 	}
 	
 	
@@ -48,8 +48,9 @@
 		  alert("El usuario ha sido registrado existosamente");
 		  windows.history.go(-1);
 		  </script>';
-		  exit;
 		  header("Location: index.php");
+		  exit;
+		  
 		  
 	}
 	
