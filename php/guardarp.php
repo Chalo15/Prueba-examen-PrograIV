@@ -24,7 +24,7 @@
 			  windows.history.go(-1);
 			  </script>';
 			 
-			  header("Location: contact.php");
+			  header("Refresh:0; url=../contact.php");
 		exit;
 		
 	}
@@ -36,7 +36,7 @@
 			  alert("Ya existe un usuario registrado con el mismo ID");
 			  windows.history.go(-1);
 			  </script>';
-			  header("Location: contact.html");
+			  header("Refresh:0; url=../contact.php");
 		exit;
 		
 	}
@@ -48,20 +48,16 @@
 		  alert("El usuario ha sido registrado existosamente");
 		  windows.history.go(-1);
 		  </script>';
-		  header("Location: index.php");
-		  exit;
-		  
-		  
-	}
-	
-	
+		  header("Refresh:0; url=../index.php");
+		  exit;  
+	}	
 	else{
 		echo '<script>
 		  alert("Error al registrarse");
 		  windows.history.go(-1);
 		  </script>';
 		  exit;
-		  header("Location: index.php");
+		  header("Refresh:0; url=../contact.php");
 		  
 	}
 	//mysqli_close($mysqli);

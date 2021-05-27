@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Transportation HTML-5 Template </title>
+        <title>Registro </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -166,7 +166,7 @@
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <div class="input-form">
-                                                <input type="text" placeholder="Correo electrónico" name = "Email" id="Email">
+                                                <input type="email" placeholder="Correo electrónico" name = "Email" id="Email">
                                             </div>
                                         </div>                                    
                                         <div class="col-lg-6">
@@ -201,7 +201,7 @@
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6">
                                             <div class="input-form">
-                                                <input type="number" placeholder="CCV" name = "CCV" id="CCV">
+                                                <input type="number" placeholder="CCV" name = "CCV" id="CCV" maxlength="3">
                                             </div>
                                         </div> 
                                         <div class="col-lg-12">

@@ -55,37 +55,37 @@ function validacion() {
       }
 
       
-      if ( isNaN(pasa) || pasa.length < 20) {
+    if ( isNaN(pasa) || pasa.length < 20) {
         errorcolor = document.getElementById("Id");
-       errorcolor.style.borderColor="red";
-          alert('Pasaporte válido');
-      return false;
-    }
+        errorcolor.style.borderColor="red";
+        alert('Pasaporte no válido');
+    return false;
+      }
     
-    if( select == null || select == 0 ) {
+      if( select == null || select == 0 ) {
       errorcolor = document.getElementById("select1");
        errorcolor.style.borderColor="red";
         alert('No seleccionó un país');
         return false;
       }
      
-      if( isNaN(tarj) || !(/^(?:4[0-9]{12}(?:[0-9]{3})?)$/.test(tarj)) ) {
+      if( isNaN(tarj)) {
         errorcolor = document.getElementById("Tarjeta");
         errorcolor.style.borderColor="red";
-        alert('Numero de tarjeta no válido');
+        alert('Ingrese un numero de tarjeta');
         return false;
       }
 
       
-      if( isNaN(Fecha) || !(/^(?:3[01]|[12][0-9]|0?[1-9])([\-/.])(0?[1-9]|1[1-2])\1\d{4}$/.test(Fecha)) ) {
+      if( isNaN(Fecha)) {
         errorcolor = document.getElementById("Fechav");
         errorcolor.style.borderColor="red";
-          alert(' Fecha no válida');
+          alert('Ingrese la fecha de vencimiento');
           return false;
         }
 
         
-        if(CCV != /^[0-9]{3,4}$/)   {
+        if(isNaN(CCV))   {
           errorcolor = document.getElementById("CCV");
         errorcolor.style.borderColor="red";
            alert("Numero de CCV invalido"); 
@@ -96,7 +96,7 @@ function validacion() {
         if( Clave.length<12 ) {
           errorcolor = document.getElementById("Clave");
           errorcolor.style.borderColor="red";
-            alert('Clave muy corta, favor de ingresar una que tenga cómo mínimo 12 caracteres');
+            alert('Clave muy corta, favor de ingresar una contraeña que tenga cómo mínimo 12 caracteres');
             return false;
           }  
 
